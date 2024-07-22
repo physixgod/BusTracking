@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussTracking.Doamin", "BussTracking.Doamin\BussTracking.Doamin.csproj", "{CB618469-53C2-4393-9537-236EAFDDBB3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusTracking.Domain", "BusTracking.Domain\BusTracking.Domain.csproj", "{CB618469-53C2-4393-9537-236EAFDDBB3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

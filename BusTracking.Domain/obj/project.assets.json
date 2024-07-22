@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\toufa\\RiderProjects\\BusTracking\\BussTracking.Doamin\\BussTracking.Doamin.csproj",
-      "projectName": "BussTracking.Doamin",
-      "projectPath": "C:\\Users\\toufa\\RiderProjects\\BusTracking\\BussTracking.Doamin\\BussTracking.Doamin.csproj",
+      "projectUniqueName": "C:\\Users\\toufa\\RiderProjects\\BusTracking\\BusTracking.Domain\\BusTracking.Domain.csproj",
+      "projectName": "BusTracking.Domain",
+      "projectPath": "C:\\Users\\toufa\\RiderProjects\\BusTracking\\BusTracking.Domain\\BusTracking.Domain.csproj",
       "packagesPath": "C:\\Users\\toufa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\toufa\\RiderProjects\\BusTracking\\BussTracking.Doamin\\obj\\",
+      "outputPath": "C:\\Users\\toufa\\RiderProjects\\BusTracking\\BusTracking.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\toufa\\AppData\\Roaming\\NuGet\\NuGet.Config"
