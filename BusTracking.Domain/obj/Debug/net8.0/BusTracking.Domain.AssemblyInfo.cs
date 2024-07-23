@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BusTracking.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8d5db73d3211fde7505746c704d0e05615e22da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4f4c754265503a9dfda0e4d8358411b198fef56")]
 [assembly: System.Reflection.AssemblyProductAttribute("BusTracking.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BusTracking.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

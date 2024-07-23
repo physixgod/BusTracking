@@ -1,0 +1,13 @@
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\bin\Debug\net8.0\BusTracking.Domain.deps.json
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\bin\Debug\net8.0\BusTracking.Domain.dll
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\bin\Debug\net8.0\BusTracking.Domain.pdb
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\obj\Debug\net8.0\BusTracking.Domain.csproj.AssemblyReference.cache
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\obj\Debug\net8.0\BusTracking.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\obj\Debug\net8.0\BusTracking.Domain.AssemblyInfoInputs.cache
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\obj\Debug\net8.0\BusTracking.Domain.AssemblyInfo.cs
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\obj\Debug\net8.0\BusTracking.Domain.csproj.CoreCompileInputs.cache
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\obj\Debug\net8.0\BusTracking.Domain.sourcelink.json
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\obj\Debug\net8.0\BusTracking.Domain.dll
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\obj\Debug\net8.0\refint\BusTracking.Domain.dll
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\obj\Debug\net8.0\BusTracking.Domain.pdb
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.Domain\obj\Debug\net8.0\ref\BusTracking.Domain.dll
