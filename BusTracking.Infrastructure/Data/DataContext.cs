@@ -21,8 +21,16 @@ namespace BusTracking.Infrastructure.DATA
                 .HasOne(u => u.Societe)
                 .WithMany(s => s.Users)
                 .HasForeignKey(u => u.SocieteId);
-
+            modelBuilder.Entity<Employees>()
+                .HasMany(e => e.TrackingEvents)
+                .WithOne(te => te.Employees)
+                .HasForeignKey(te => te.Rfid)
+                .OnDelete(DeleteBehavior.Restrict); 
+            modelBuilder.Entity<Employees>()
+                .Property(e => e.Rfid)
+                .ValueGeneratedNever(); 
             base.OnModelCreating(modelBuilder);
-        }
+          
+        }   
     }
 }

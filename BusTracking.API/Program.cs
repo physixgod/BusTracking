@@ -1,5 +1,6 @@
 using BusTracking.Application.Interfaces;
 using BusTracking.Application.Repositories;
+using BusTracking.Domain.ENTITIES;
 using Microsoft.EntityFrameworkCore;
 using BusTracking.Infrastructure.DATA; // Adjust the namespace as needed
 
@@ -8,6 +9,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ITrackingEventRepository, TrackingRepository>();
+builder.Services.AddScoped<IEmployeesRepository, EmployeeRepository>();
 // Configure DbContext with SQL Server
 builder.Services.AddDbContext<DataContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("bustracking")));
 var connectionString = builder.Configuration.GetConnectionString("bustracking");

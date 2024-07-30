@@ -11,6 +11,8 @@ namespace BusTracking.Domain.ENTITIES
         public int DeviceID { get; set; }
         public double Longitude { get; set; }
         public double Latitude { get; set; }
-        public int RfidID { get; set; }
+        public int Rfid { get; set; } 
+        public Employees Employees { get; set; } 
+        
     }
 }

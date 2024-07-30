@@ -22,6 +22,49 @@ namespace BusTracking.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BusTracking.Domain.ENTITIES.Employees", b =>
+                {
+                    b.Property<int>("Rfid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Adresse")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmployeeFirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmployeeLastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gouvernement")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Matricule")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("PointedBus")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("PointedIn")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("PointedOut")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Region")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Rfid");
+
+                    b.ToTable("Employees");
+                });
+
             modelBuilder.Entity("BusTracking.Domain.ENTITIES.Societe", b =>
                 {
                     b.Property<int>("SocieteId")
@@ -37,6 +80,36 @@ namespace BusTracking.Infrastructure.Migrations
                     b.HasKey("SocieteId");
 
                     b.ToTable("Societes");
+                });
+
+            modelBuilder.Entity("BusTracking.Domain.ENTITIES.TrackingEvent", b =>
+                {
+                    b.Property<int>("TrackingEventID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TrackingEventID"));
+
+                    b.Property<int>("DeviceID")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Latitude")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("float");
+
+                    b.Property<int>("Rfid")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("TrackingEventID");
+
+                    b.HasIndex("Rfid");
+
+                    b.ToTable("TrackingEvent");
                 });
 
             modelBuilder.Entity("BusTracking.Domain.ENTITIES.User", b =>
@@ -58,6 +131,17 @@ namespace BusTracking.Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("BusTracking.Domain.ENTITIES.TrackingEvent", b =>
+                {
+                    b.HasOne("BusTracking.Domain.ENTITIES.Employees", "Employees")
+                        .WithMany("TrackingEvents")
+                        .HasForeignKey("Rfid")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Employees");
+                });
+
             modelBuilder.Entity("BusTracking.Domain.ENTITIES.User", b =>
                 {
                     b.HasOne("BusTracking.Domain.ENTITIES.Societe", "Societe")
@@ -65,6 +149,11 @@ namespace BusTracking.Infrastructure.Migrations
                         .HasForeignKey("SocieteId");
 
                     b.Navigation("Societe");
+                });
+
+            modelBuilder.Entity("BusTracking.Domain.ENTITIES.Employees", b =>
+                {
+                    b.Navigation("TrackingEvents");
                 });
 
             modelBuilder.Entity("BusTracking.Domain.ENTITIES.Societe", b =>

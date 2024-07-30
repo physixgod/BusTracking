@@ -147,3 +147,5 @@ C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\obj\Debug\net8.0\refint
 C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\obj\Debug\net8.0\BusTracking.API.pdb
 C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\obj\Debug\net8.0\BusTracking.API.genruntimeconfig.cache
 C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\obj\Debug\net8.0\ref\BusTracking.API.dll
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\bin\Debug\net8.0\Coravel.dll
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\bin\Debug\net8.0\AutoMapper.dll

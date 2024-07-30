@@ -4,5 +4,7 @@ namespace BusTracking.Application.Interfaces;
 
 public interface IEmployeesRepository
 {
-    ICollection<Employees> getEmployees();
+    ICollection<Employees> GetAllEmployess();
+    Employees AddEmployee(Employees emp);
+    
 }

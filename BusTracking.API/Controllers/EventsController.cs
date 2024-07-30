@@ -1,4 +1,5 @@
-﻿using BusTracking.Application.Repositories;
+﻿using BusTracking.Application.Interfaces;
+using BusTracking.Application.Repositories;
 using BusTracking.Domain.ENTITIES;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,17 +8,23 @@ namespace BusTracking.API.Controllers;
 [ApiController]
 public class EventsController:ControllerBase
 {
-    private readonly TrackingRepository _trackingEvent;
+    private readonly ITrackingEventRepository _trackingEvent;
 
-    public EventsController(TrackingRepository trackingRepository)
+    public EventsController(ITrackingEventRepository trackingRepository)
     {
         _trackingEvent = trackingRepository;
     }
     [HttpGet("getTodayEvents")]
-    public IActionResult getTodayEvents()
+    public IActionResult GetTodayEvents()
     {
-        return Ok(_trackingEvent.getTodayEvents());
+        return Ok(_trackingEvent.GetAllTodayEvents());
     }
+    [HttpGet("getTodayEventsByEmployees")]
+    public IActionResult GetTodayEventsByEmployees()
+    {
+        return Ok(_trackingEvent.GetEventsByEmployees());
+    }
+    
     
     
 }
