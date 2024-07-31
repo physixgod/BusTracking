@@ -149,3 +149,7 @@ C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\obj\Debug\net8.0\BusTra
 C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\obj\Debug\net8.0\ref\BusTracking.API.dll
 C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\bin\Debug\net8.0\Coravel.dll
 C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\bin\Debug\net8.0\MailKit.dll
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\bin\Debug\net8.0\MimeKit.dll
+C:\Users\toufa\RiderProjects\BusTracking\BusTracking.API\bin\Debug\net8.0\System.Formats.Asn1.dll

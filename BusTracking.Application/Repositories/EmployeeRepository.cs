@@ -38,4 +38,17 @@ public class EmployeeRepository:IEmployeesRepository
 
         return emp;
     }
+
+    public async Task<Employees> UpdateEmployeeImageUrl(int rfid, string imageUrl)
+    {
+        var employee = await _context.Employees.FindAsync(rfid);
+        if (employee == null)
+        {
+            return null;
+        }
+
+        employee.EmployeeImageUrl = imageUrl;
+        await _context.SaveChangesAsync();
+        return employee;
+    }
 }

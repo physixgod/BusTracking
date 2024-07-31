@@ -39,6 +39,8 @@ public class TrackingRepository:ITrackingEventRepository
             .Where(te => te.Timestamp >= today && te.Timestamp < endOfDay)
             .Select(te => new TrackingEventDto
             {
+                RFID=te.Employees.Rfid, 
+                EmployeePhotoUrl=te.Employees.EmployeeImageUrl,
                 EmployeeFirstName = te.Employees.EmployeeFirstName,
                 EmployeeLastName = te.Employees.EmployeeLastName,
                 Timestamp = te.Timestamp,

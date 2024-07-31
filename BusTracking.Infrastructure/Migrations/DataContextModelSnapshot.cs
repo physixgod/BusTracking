@@ -31,8 +31,19 @@ namespace BusTracking.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("EmployeeFirstName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmployeeImageUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EmployeeLastName")
@@ -116,6 +127,13 @@ namespace BusTracking.Infrastructure.Migrations
                 {
                     b.Property<string>("Login")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CodeP")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
                         .IsRequired()
