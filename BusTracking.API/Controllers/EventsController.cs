@@ -24,7 +24,19 @@ public class EventsController:ControllerBase
     {
         return Ok(_trackingEvent.GetEventsByEmployees());
     }
-    
-    
+
+    [HttpGet("GetMonthlyEvents")]
+    public IActionResult GetMonthlyEvents()
+    {
+        return Ok(_trackingEvent.GetEventsForCurrentMonth());
+    }
+
+    [HttpGet("GetMonthlyEvents/{rfid}")]
+    public IActionResult GetMonthlyEvents(int rfid)
+    {
+        return Ok(_trackingEvent.GetEventsForCurrentMonthByEmployee(rfid));
+    }
+
+
     
 }

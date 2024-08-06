@@ -9,4 +9,6 @@ public interface IEmployeesRepository
     Task<Employees> UpdateEmployeeImageUrl(int rfid, string imageUrl);
     List<Employees> addEmployeesList(List<Employees> emps);
     List<TrackingEventDto> GetTrackingEventsForLastMonth(int rfid);
+    int GetEmployeeByTrackingEventIdAsync(int trackingEventId);
+    Employees GetEmployeeByRFID(int rfid);
 }

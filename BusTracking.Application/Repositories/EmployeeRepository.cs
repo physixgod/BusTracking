@@ -1,6 +1,8 @@
 ﻿using BusTracking.Application.Interfaces;
+using BusTracking.Domain.Dto;
 using BusTracking.Domain.ENTITIES;
 using BusTracking.Infrastructure.DATA;
+using Microsoft.EntityFrameworkCore;
 
 namespace BusTracking.Application.Repositories;
 
@@ -68,5 +70,21 @@ public class EmployeeRepository:IEmployeesRepository
     {
         throw new NotImplementedException();
     }
+
+    public int GetEmployeeByTrackingEventIdAsync(int trackingEventId)
+    {
+        var trackingEvent = _context.TrackingEvent
+            .Include(te => te.Employees)
+            .SingleOrDefault(te => te.TrackingEventID == trackingEventId);
+        
+        var employee = trackingEvent.Employees;
+        return employee.Rfid;
+    }
+
+    public Employees GetEmployeeByRFID(int rfid)
+    {
+        return _context.Employees.Find(rfid);
+    }
 }
+
 

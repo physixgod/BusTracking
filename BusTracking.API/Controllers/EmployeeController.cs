@@ -83,5 +83,16 @@ public class EmployeeController:ControllerBase
         var imageFileStream = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
         return File(imageFileStream, "image/jpeg");
     }
+    [HttpGet("GetEmployeeByEvent/{idEvent}")]
+    public int GetEmployeeByEvent(int idEvent)
+    {
+        return _employeesRepository.GetEmployeeByTrackingEventIdAsync(idEvent);
+    }
+
+    [HttpGet("GetEmployeeByRFID/{rfid}")]
+    public Employees GetEmployeeByRFID(int rfid)
+    {
+        return _employeesRepository.GetEmployeeByRFID(rfid);
+    }
 }
     
