@@ -51,4 +51,22 @@ public class EmployeeRepository:IEmployeesRepository
         await _context.SaveChangesAsync();
         return employee;
     }
+
+    public List<Employees> addEmployeesList(List<Employees> employees)
+    {
+        if (employees == null || !employees.Any())
+        {
+            throw new ArgumentNullException(nameof(employees));
+        }
+
+        _context.Employees.AddRange(employees);
+        _context.SaveChangesAsync();
+        return employees;
+    }
+
+    public List<TrackingEventDto> GetTrackingEventsForLastMonth(int rfid)
+    {
+        throw new NotImplementedException();
+    }
 }
+

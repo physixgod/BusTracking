@@ -22,6 +22,13 @@ public class EmployeeController:ControllerBase
         return Ok(employee);
     }
 
+    [HttpPost("AddEmployees")]
+    public IActionResult AddEmployees(List<Employees> emps)
+    {
+        _employeesRepository.addEmployeesList(emps);
+        return Ok(emps);
+    }
+
     [HttpGet("GetAllEmployees")]
     public IActionResult GetAllEmployees()
     {
